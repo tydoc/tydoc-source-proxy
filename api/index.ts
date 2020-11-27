@@ -19,7 +19,7 @@ async function handler(req: NowRequest, res: NowResponse) {
     res.send(data)
   } catch (e) {
     console.error(e)
-    throw new Error(`Error occured: ${e}`)
+    res.status(500).send(`Error occured: ${e}`)
   }
 }
 
