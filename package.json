@@ -5,7 +5,8 @@
   "dependencies": {
     "node-fetch": "^2.6.1",
     "request": "^2.88.2",
-    "tar": "^6.0.5"
+    "tar": "^6.0.5",
+    "tydoc": "^0.2.5"
   },
   "devDependencies": {
     "@types/node": "^14.14.10",

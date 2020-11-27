@@ -6,9 +6,7 @@ export async function downloadAndUnzip(
   dirPath: string,
 ): Promise<void> {
   return new Promise((resolve, reject) => {
-    // const out = fs.createWriteStream(dirPath)
-    // resolve()
-    const _ = request
+    request
       .get(url)
       .pipe(tar.x({ cwd: dirPath, strip: 1 }))
       .on('finish', resolve)
