@@ -16,7 +16,7 @@ async function handler(req: NowRequest, res: NowResponse) {
 
   try {
     const data = await proxy({ github, entrypoint })
-    res.send(data)
+    res.json(data)
   } catch (e) {
     console.error(e)
     res.status(500).send(`Error occured: ${e}`)
