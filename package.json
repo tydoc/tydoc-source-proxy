@@ -3,14 +3,12 @@
     "build": "tsc"
   },
   "dependencies": {
-    "node-fetch": "^2.6.1",
     "request": "^2.88.2",
     "tar": "^6.0.5",
     "tydoc": "^0.2.5"
   },
   "devDependencies": {
     "@types/node": "^14.14.10",
-    "@types/node-fetch": "^2.5.7",
     "@types/request": "^2.48.5",
     "@types/tar": "^4.0.4",
     "@vercel/node": "^1.8.5",
