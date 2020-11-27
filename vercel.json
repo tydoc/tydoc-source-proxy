@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/index.js": {
+    "api/index.ts": {
       "memory": 3008,
       "maxDuration": 60
     }
