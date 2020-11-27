@@ -5,6 +5,7 @@ import * as request from 'request'
 import { downloadAndUnzip } from './download-unzip'
 // process.env['DEBUG'] = 'tydoc:*'
 import * as TyDoc from 'tydoc'
+import { DocPackage } from 'tydoc/dist/api/extractor/doc'
 
 export async function proxy({
   github,
@@ -12,7 +13,7 @@ export async function proxy({
 }: {
   github: string
   entrypoint: string
-}): Promise<string> {
+}): Promise<DocPackage> {
   const [, owner, name] = github.match(/^https:\/\/github\.com\/(.+?)\/(.+?)$/)!
   const { default_branch: defaultBranch } = await getJson<{
     default_branch: string
@@ -34,7 +35,7 @@ export async function proxy({
     prjDir: dir,
   })
 
-  return JSON.stringify(docs)
+  return docs
 }
 
 async function getJson<T>(url: string): Promise<T> {
